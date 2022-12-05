@@ -1,6 +1,5 @@
 package ro.itschool;
 
-import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvBindByPosition;
 import lombok.*;
 
@@ -26,5 +25,4 @@ public class Player {
 
     @CsvBindByPosition(position = 4)
     private int gsTitles;
-
 }
