@@ -1,4 +1,4 @@
-package ro.itschool;
+package project;
 
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;

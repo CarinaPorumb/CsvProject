@@ -1,4 +1,4 @@
-package ro.itschool;
+package project;
 
 import com.opencsv.bean.CsvBindByPosition;
 import lombok.*;
