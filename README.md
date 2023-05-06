@@ -1,7 +1,7 @@
 # CSV Project 
 
 This is a simple Java project that demonstrates how to read data from a **CSV file**, containing information about 
-ATP players such as their names, age and number of Grand Slam titles, using the **CSV library** and **Lombok dependency**. 
+ATP players such as their names, ages and number of Grand Slam titles, using the **CSV library** and **Lombok dependency**. 
 The project was developed using **Java 20, JDK 20 and Maven 3.9.1.**
 
 ---
