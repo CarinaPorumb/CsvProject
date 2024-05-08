@@ -24,12 +24,12 @@ public class App {
 
     public static void main(String[] args) throws IOException, CsvValidationException {
 
-        LOGGER.info("Starting CSV parsing demo...");
+        LOGGER.info("Starting CSV parsing demo... \n");
 
         List<Player> playersFromCsv = parseCsvToPlayers();
-        LOGGER.info("Parsed Players from CSV: {}", playersFromCsv);
+        LOGGER.info("Parsed Players from CSV: {} \n ", playersFromCsv);
 
-        LOGGER.info("Parsed Players Line by Line: {}", parseCsvToPlayersLineByLine());
+        LOGGER.info("Parsed Players Line by Line: {}  \n", parseCsvToPlayersLineByLine());
 
         printCsvContentWithScanner();
 
@@ -70,11 +70,11 @@ public class App {
     }
 
     public static void printCsvContentWithScanner() {
-        LOGGER.info("Printing CSV content using Scanner...");
+        LOGGER.info("Printing CSV content using Scanner... \n");
         try (Scanner scanner = new Scanner(new File(PATH))) {
             scanner.useDelimiter(",");
             while (scanner.hasNext()) {
-                LOGGER.info(scanner.next() + " ");
+                LOGGER.info("{} ", scanner.next());
             }
         } catch (FileNotFoundException e) {
             LOGGER.error("CSV file not found: {}", e.getMessage(), e);
@@ -82,15 +82,15 @@ public class App {
     }
 
     public static void printCsvContent(String fileName) throws IOException, CsvValidationException {
-        LOGGER.info("Printing CSV content line by line...");
+        LOGGER.info("\n \n Printing CSV content line by line...");
         try (FileReader fileReader = new FileReader(fileName);
              CSVReader csvReader = new CSVReaderBuilder(fileReader).withSkipLines(1).build()) {
             String[] players;
             while ((players = csvReader.readNext()) != null) {
                 for (String cell : players) {
-                    LOGGER.info(cell + ", ");
+                    LOGGER.info("{}, ", cell);
                 }
-                LOGGER.info("");
+                LOGGER.info("\n");
             }
         }
     }
